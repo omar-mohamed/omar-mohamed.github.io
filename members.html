@@ -12,18 +12,17 @@ header-img: "img/home-bg.jpg"
 	
 	<h1>{{ member.name }}</h1>
 	
-	<h2>{{ member.role }}</h2>
+	<h3>{{ member.role }}</h3>
 	
 	{% if member.github %} 
 	<span class="social-share-googleplus"><a href="https://github.com/{{ member.github }}" title="Github"><img src="{{ "/img/icons/github-icon.png" | prepend: site.baseurl }}" style="height:20px">Github</a></span> 
 	{% endif %}
-	{% if member.email %}
-	<span class="social-share-gmail"><a href="{{ member.email }}" title="Email"><img src="{{ "/img/icons/gplus-icon.png" | prepend: site.baseurl }}" style="height:20px">Email</a></span>
-	{% endif %}
 	{% if member.linkedIn %}
-	<span class="social-share-linkedin"><a href="{{ member.linkedIn }}" title="Linked In"><img src="{{ "/img/icons/url-icon.png"| prepend: site.baseurl }}" style="height:20px">Linked In</a></span>
+	<span class="social-share-linkedin"><a href="{{ member.linkedIn }}" title="Linked In"><img src="{{ "/img/icons/linkedin-logo.png"| prepend: site.baseurl }}" style="height:20px">Linked In</a></span>
 	{% endif %}
-	
+	{% if member.email %}
+	<span class="social-share-gmail"><a href="{{ member.email }}" title="Email"><img src="{{ "/img/icons/email-icon.png" | prepend: site.baseurl }}" style="height:20px">{{ member.email }}</a></span>
+	{% endif %}
 	</br>
 
 	{% if member.bio %} 
