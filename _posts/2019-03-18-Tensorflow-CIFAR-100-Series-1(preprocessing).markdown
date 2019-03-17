@@ -27,7 +27,7 @@ Link: [CIFAR100_Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ## Download and extract the dataset
 
-This script will begin to download the CIFAR100 dataset 
+This script will begin to download the CIFAR100 dataset in the project folder
 
 {% highlight python %}
 
@@ -170,7 +170,7 @@ train_data, train_labels = randomize(train_data, train_labels)
 
 {% endhighlight %}
 
-If you take a look at the images in the dataset, you will notice how blurry they are. So let's try to combat that by applying an [Unsharp masking kernel](https://en.wikipedia.org/wiki/Unsharp_masking) to sharpen the blurry images
+If you take a look at the images in the dataset, you will notice how blurry they are. So let's try to combat that by applying an [unsharp_masking_kernel](https://en.wikipedia.org/wiki/Unsharp_masking) to sharpen the blurry images
 
 ![image](https://user-images.githubusercontent.com/6074821/53117205-0ee5a700-3553-11e9-969c-e5bc84c2299b.png)
 
