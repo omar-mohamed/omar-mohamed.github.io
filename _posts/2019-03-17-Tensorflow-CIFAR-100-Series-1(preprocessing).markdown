@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Tensorflow CIFAR-100 series #1(preprocessing)
+title:      Tensorflow CIFAR-100 Series (1)
 author:     Omar Mohamed
 tags: 		tensorflow ML CNN CIFAR100 preprocessing
 subtitle:  	CIFAR-100 preprocessing and saving
@@ -18,16 +18,16 @@ In this series, I will be discussing some training models and techniques on the 
 ## Problem formulation and dataset info
 
 Given a blurry image, the task is to classify it into one of the 100 classes in CIFAR-100.
-The CIFAR-100 dataset consists of 60000 32x32 colour images in 100 classes, with 600 images per class. There are 50000 training images and 10000 test images. 
+The dataset consists of 60000 32x32 colour images in 100 classes, with 600 images per class. There are 50000 training images and 10000 test images. 
 
-Link: [CIFAR_100_Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+Link: [CIFAR100_Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ![plt](https://user-images.githubusercontent.com/6074821/52181190-11789a80-27f8-11e9-8104-7751bfce2e18.png)
 
 
-## Download and extract dataset
+## Download and extract the dataset
 
-This script will begin to download CIFAR100 dataset 
+This script will begin to download the CIFAR100 dataset 
 
 {% highlight python %}
 
