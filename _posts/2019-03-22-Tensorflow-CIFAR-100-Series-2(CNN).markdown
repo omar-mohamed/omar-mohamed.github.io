@@ -7,11 +7,11 @@ subtitle:  	CIFAR-100 CNN training
 category:  Technical
 ---
 
-In [part_1](https://omar-mohamed.github.io/technical/2019/03/18/Tensorflow-CIFAR-100-Series-1(preprocessing)/) we preprocessed the data saved it in a pickle file for training. In this tutorial we will train a simple CNN and see how it performs.
+In [part_1](https://omar-mohamed.github.io/technical/2019/03/18/Tensorflow-CIFAR-100-Series-1(preprocessing)/) we preprocessed the data and saved it in a pickle file for training. In this tutorial we will train a simple CNN and see how it performs.
 
 ## Load and reformat the data
 
-This script will begin to download the CIFAR100 dataset in the project folder
+First thing, we should load the data and make sure it's in the correct shape for training.
 
 {% highlight python %}
 
@@ -90,7 +90,7 @@ num_hidden3 = 2048  # the size of the hidden neurons in fully connected layer
 
 {% endhighlight %}
 
-The batch size is set at 500, but if you run into memory problems you can make lower it down. These constants give you a hint about the model structure with four convolution layers and three fully connected ones.
+The batch size is set at 500, but if you run into memory problems you can lower it down. These constants give you a hint about the model structure with four convolution layers and three fully connected ones.
 Now let's start defining our tensorflow graph.
 
 {% highlight python %}
@@ -117,7 +117,7 @@ with graph.as_default():
 
 {% endhighlight %}
 
-Here we defined our inputs with length None to support any input length, and the same goes for the labels. We will also take as input the fully connected keep probability and the convolution keep probability that will be used when performing dropout to fight overfitting the training set. The final placeholder is a boolean to indicate whether we are training or not, it is used 
+Here we defined our inputs with length 'None' to support any input length, and the same goes for the labels. We will also take as input the fully connected keep probability and the convolution keep probability that will be used when performing dropout to fight overfitting the training set. The final placeholder is a boolean to indicate whether we are training or not, it is used 
 for batch normalizaton.
 
 {% highlight python %}
@@ -130,18 +130,18 @@ for batch normalizaton.
 	# a method to return convolutional weights
 	def get_conv_weight(name, shape):
 		return tf.get_variable(name, shape=shape,
-							   initializer=tf.contrib.layers.xavier_initializer_conv2d())
+					initializer=tf.contrib.layers.xavier_initializer_conv2d())
 
 
 	# a method to return fully connected weights
 	def get_fully_connected_weight(name, shape):
 		weights = tf.get_variable(name, shape=shape,
-								  initializer=tf.contrib.layers.xavier_initializer())
+				    	initializer=tf.contrib.layers.xavier_initializer())
 		return weights
 
 {% endhighlight %}
 
-The first method normalizes the input to be in range [-1,1], the second method returns the convolution weights given a name and a shape (returns the same variable in case same name and shape sent) and third is the same but with fully connected weights.
+The first method normalizes the input to be in range [-1,1], the second method returns the convolution weights given a name and a shape (returns the same variable in case same name and shape sent but only if in the same variable scope) and the third is the same but with fully connected weights.
 Now we will begin adding the building blocks of our model.
 
 {% highlight python %}
@@ -254,7 +254,7 @@ Now we compute the loss and update the weights.
 
 We get the loss using cross entropy on softmax of logits. UPDATE_OPS is used for batch normalization to save the values in case you want to predict given a new input. 
 We also use learning rate decay and adam optimizer with gradient clipping.
-Now we only need to handle inputs than need to be predicted.
+Now we only need to handle inputs that need to be predicted.
 {% highlight python %}
     # Predictions for the inputs.
 
@@ -283,13 +283,13 @@ num_epochs = 100  # number of training epochs
 
 # used for drawing error and accuracy over time
 
-# augmented training batch
+# training batch
 training_batch_loss = []
 training_batch_loss_iteration = []
 training_batch_accuracy = []
 training_batch_accuracy_iteration = []
 
-# normal training set
+# full training set
 train_accuracy = []
 train_accuracy_iteration = []
 
@@ -308,7 +308,7 @@ early_stop_counter = 3  # stop if test loss is not decreasing for early_stop_cou
 {% endhighlight %}
 
 The first method computes the accuracy of the prediction. We will be training for 100 epoch but we will also be using early stopping in case the loss on test set 
-is increasing for 3 epochs. The rest of the values are used for drawing purposes. Now we are ready to begin the session.
+is not decreasing for 3 epochs. The rest of the values are used for drawing purposes. Now we are ready to begin the session.
 
 {% highlight python %}
 with tf.Session(graph=graph, config=tf.ConfigProto(log_device_placement=True)) as session:
@@ -491,10 +491,10 @@ Now we have drawn the plots and also showed a prediction sample. So... What were
 
 Here are the results of this simple model:
 
-Final training set accuracy: 99.4%
-Final training set loss: 0.0377
-Final test set accuracy: 56.8%
-Final test set loss: 1.8212
+Final training set accuracy: 99.4% <br/>
+Final training set loss: 0.0377 <br/>
+Final test set accuracy: 56.8% <br/>
+Final test set loss: 1.8212 <br/>
 
 ![image](https://user-images.githubusercontent.com/6074821/54788263-16be6700-4c37-11e9-9a5d-b20315c59e0c.png)
 
