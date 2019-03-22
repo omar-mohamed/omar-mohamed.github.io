@@ -3,7 +3,7 @@ layout:     post
 title:      Tensorflow CIFAR-100 Series (2)
 author:     Omar Mohamed
 tags: 		tensorflow ML CNN CIFAR100
-subtitle:  	CIFAR-100 CNN training
+subtitle:  	Training a CNN
 category:  Technical
 ---
 
@@ -509,4 +509,5 @@ And we also note that it stopped after 30 epochs because the test loss was incre
 Well..lots of things, we are just getting started. In the next tutorial we will see how we can load the saved model and make predictions with it. After that 
 we will start to make small but important enhancements to our model to make it generalize better to the test set.
 If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
-See you in part 3. 
+See you in [part_3](https://omar-mohamed.github.io/technical/2019/03/22/Tensorflow-CIFAR-100-Series-3(Load-Model)/).
+ 

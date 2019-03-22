@@ -3,7 +3,7 @@ layout:     post
 title:      Tensorflow CIFAR-100 Series (1)
 author:     Omar Mohamed
 tags: 		tensorflow ML CIFAR100 preprocessing
-subtitle:  	CIFAR-100 preprocessing and saving
+subtitle:  	Preprocessing and saving the dataset
 category:  Technical
 ---
 
