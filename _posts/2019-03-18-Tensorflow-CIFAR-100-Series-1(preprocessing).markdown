@@ -2,7 +2,7 @@
 layout:     post
 title:      Tensorflow CIFAR-100 Series (1)
 author:     Omar Mohamed
-tags: 		tensorflow ML CNN CIFAR100 preprocessing
+tags: 		tensorflow ML CIFAR100 preprocessing
 subtitle:  	CIFAR-100 preprocessing and saving
 category:  Technical
 ---
