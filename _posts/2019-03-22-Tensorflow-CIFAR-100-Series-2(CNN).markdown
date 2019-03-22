@@ -79,7 +79,7 @@ patch_size_2 = 5  # convolution filter size 2
 patch_size_3 = 3  # convolution filter size 3
 patch_size_4 = 3  # convolution filter size 4
 
-depth1 = 64  # number of filters in first conv layer
+depth1 = 64   # number of filters in first conv layer
 depth2 = 128  # number of filters in second conv layer
 depth3 = 256  # number of filters in third conv layer
 depth4 = 512  # number of filters in fourth conv layer
