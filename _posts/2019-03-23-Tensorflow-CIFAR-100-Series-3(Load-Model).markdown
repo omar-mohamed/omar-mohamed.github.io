@@ -7,9 +7,9 @@ subtitle:  	Predicting with the saved model
 category:  Technical
 ---
 
-In [part_2](https://omar-mohamed.github.io/technical/2019/03/22/Tensorflow-CIFAR-100-Series-2(CNN)/) we trained out simple model and saved it in saved_model folder.
-In this quick tutorial we will learn how to load a saved model and make classifications with it. We will use the loaded model to classify the test set again.
-Just to make sure that it is working well, but of course you can classify any new image given that it is in the correct format which is [num_images, 32,32,3] so in case of single image it will be
+In [part_2](https://omar-mohamed.github.io/technical/2019/03/22/Tensorflow-CIFAR-100-Series-2(CNN)/) we trained our simple model and saved it in saved_model folder.
+In this quick tutorial we will learn how to load a saved model and make classifications with it. We will use the loaded model to classify the test set again
+just to make sure that it is working well, but of course you can classify any new image given that it is in the correct format which is [num_images, 32,32,3] so in case of a single image it will be
 [1,32,32,3].
 
 ## Load and reformat the test set
@@ -98,7 +98,7 @@ with tf.Session() as sess:
 {% endhighlight %}
 
 All we did in the above code is to load the model, get the tensors we will be feeding or retrieving by name, and going through the test set in batches and making the classifications.
-And this concludes this tutorial. In the upcoming ones things will start to get interesting with us trying to enhance the accuracy or training time by using data augmentation, dropblock, res nets, and other cool ideas.
+And this concludes this tutorial. In the upcoming ones things will start to get interesting with us trying to enhance the accuracy or training time by using data augmentation, dropblock, res nets, depth-wise convolution,  and other cool ideas.
 If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
 See you in part 4.
 
