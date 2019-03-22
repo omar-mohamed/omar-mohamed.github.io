@@ -98,7 +98,7 @@ with tf.Session() as sess:
 {% endhighlight %}
 
 All we did in the above code is to load the model, get the tensors we will be feeding or retrieving by name, and going through the test set in batches and making the classifications.
-And this concludes this tutorial. In the upcoming ones things will start to get interesting with us trying to enhance the accuracy or training time by using data augmentation, dropblock, res nets, depth-wise convolution,  and other cool ideas.
+And this concludes this tutorial. In the upcoming ones things will start to get interesting with us trying to enhance the accuracy or training time by using data augmentation, dropblock, res nets, depth-wise convolution, and other cool ideas.
 If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
 See you in part 4.
 
