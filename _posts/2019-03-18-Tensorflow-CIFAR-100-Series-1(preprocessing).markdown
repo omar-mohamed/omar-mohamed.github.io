@@ -216,5 +216,5 @@ except Exception as e:
 
 {% endhighlight %}
 
-Now we should be ready for training, which will be done in the next part of the series. If you want to see the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository.
-See you in part 2.
+Now we should be ready for training, which will be done in the next part of the series. If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
+See you in [part_2](https://omar-mohamed.github.io/technical/2019/03/22/Tensorflow-CIFAR-100-Series-2(CNN)/).
