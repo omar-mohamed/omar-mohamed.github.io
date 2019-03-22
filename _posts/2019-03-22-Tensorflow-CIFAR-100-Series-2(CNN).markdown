@@ -377,7 +377,7 @@ Now let's use them.
 
     train_conv_keep_prob = 0.85
     train_conv_keep_prob_min = 0.85 # for linear decrease limit
-		train_conv_keep_prob_decrease_per_epoch = 0.005 # for linear decrease after every epoch
+    train_conv_keep_prob_decrease_per_epoch = 0.005 # for linear decrease after every epoch
     test_predictions = None
     print('Initialized')
     for epoch in range(num_epochs):
