@@ -85,5 +85,5 @@ The results are not better than normal convolution, but close nonetheless and mu
 
 
 If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
-See you in [part 5](https://omar-mohamed.github.io/technical/2019/04/19/Tensorflow-CIFAR-100-Series-5(Data_augmentation)/).
+See you in [part 5](https://omar-mohamed.github.io/technical/2019/04/19/Tensorflow-CIFAR-100-Series-5(Data-augmentation)/).
 
