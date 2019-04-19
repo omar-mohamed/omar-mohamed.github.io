@@ -12,7 +12,7 @@ But as you may have noticed, training a convolutional network takes a lot of tim
 
 ## Depth-wise separable convolution
 
-Depth-wise separable convolution cconsists of basic ideas: depth-wise convolution and point-wise convolution.
+Depth-wise separable convolution consists of two basic ideas: depth-wise convolution and point-wise convolution.
 
 ### Depth-wise convolution
 
@@ -35,7 +35,7 @@ Point-wise convolution is a 1x1xD filter that is used after depth-wise convoluti
 
 The image above uses 256 of these filters to get to the same shape of the normal convolution in the first image.
 
-So this is separable depth-wise convolution breifly. If you want more information on why it is faster check out this link [A Basic Introduction to Separable Convolutions](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728)
+So this is separable depth-wise convolution briefly. If you want more information on why it is faster check out this link [A Basic Introduction to Separable Convolutions](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728)
 
 
 ## Implementation
@@ -74,6 +74,11 @@ Training set accuracy:
 Test set accuracy:
 
 ![image](https://user-images.githubusercontent.com/6074821/56436777-48c9f400-62dd-11e9-82d1-12f80e68e07c.png)
+
+Final training set accuracy: 99.4% <br/>
+Final training set loss: 0.0448 <br/>
+Final test set accuracy: 51.3% <br/>
+Final test set loss: 2.1067 <br/>
 
 The results are not better than normal convolution, but close nonetheless and much faster.
 
