@@ -2,7 +2,7 @@
 layout:     post
 title:      Tensorflow CIFAR-100 Series (4)
 author:     Omar Mohamed
-tags: 		tensorflow ML CIFAR100
+tags: 		tensorflow ML CIFAR100 CNN
 subtitle:  	Depth-wise separable convolution
 category:  Technical
 ---
