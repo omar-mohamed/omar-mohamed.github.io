@@ -7,7 +7,7 @@ subtitle:  	Dropblocks
 category:  Technical
 ---
 
-In [part_5](https://omar-mohamed.github.io/technical/2019/04/19/Tensorflow-CIFAR-100-Series-5(data-augmentation)/) we used data agmentation to
+In [part_5](https://omar-mohamed.github.io/technical/2019/04/19/Tensorflow-CIFAR-100-Series-5(Data-augmentation)/) we used data agmentation to
 increase our performance by a large margin. In this tutorial we will introduce a more powerful regularization technique that uses the same idea
 of coarse dropout, the data augmentation technique we used, but on the middle layers of the convolutions too instead of normal dropout. 
 It's called dropblock.
