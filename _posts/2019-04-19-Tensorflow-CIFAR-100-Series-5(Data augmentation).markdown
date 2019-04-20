@@ -100,5 +100,5 @@ So a simple idea like data augmentation can really increase our accuracy by a la
 
 
 If you want to check the full state of the project until now click [here](https://github.com/omar-mohamed/Object-Classification-CIFAR-100) to go the repository. <br/>
-See you in [part 6](https://omar-mohamed.github.io/technical/2019/04/20/Tensorflow-CIFAR-100-Series-6(DropBlock)/).
+See you in [part 6](https://omar-mohamed.github.io/technical/2019/04/20/Tensorflow-CIFAR-100-Series-6(Dropblock)/).
 

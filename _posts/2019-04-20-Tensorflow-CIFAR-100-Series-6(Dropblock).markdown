@@ -8,7 +8,7 @@ category:  Technical
 ---
 
 In [part_5](https://omar-mohamed.github.io/technical/2019/04/19/Tensorflow-CIFAR-100-Series-5(data-augmentation)/) we used data agmentation to
-increase out performance by a large margin. In this tutorial we will introduce a more powerful regularization technique that uses the same idea
+increase our performance by a large margin. In this tutorial we will introduce a more powerful regularization technique that uses the same idea
 of coarse dropout, the data augmentation technique we used, but on the middle layers of the convolutions too instead of normal dropout. 
 It's called dropblock.
 
@@ -17,7 +17,7 @@ It's called dropblock.
 Dropblock builds on the idea of dropout regularization in the case of images to act as a better regularizer. The idea is to drop a whole block 
 of neurons instead of a single one in the feature space. The following is an image from the original [paper](https://arxiv.org/abs/1810.12890) describing the idea: 
 
-![image](https://user-images.githubusercontent.com/6074821/56459044-bc780980-638e-11e9-9fb5-c924842070c9.png)
+![image](https://user-images.githubusercontent.com/6074821/56461369-08887580-63b2-11e9-8e75-29f2474a25d1.png)
 
 (a) input image to a convolutional neural network. The green regions in (b) and (c) include
 the activation units which contain semantic information in the input image. Dropping out activations
@@ -28,7 +28,7 @@ classifying input image.
 
 ## Implementation
 
-We will be using [An Jiaoyang implementation](https://github.com/DHZS/tf-dropblock) of dropblock in tensorflow:
+We will be using An Jiaoyang's [implementation](https://github.com/DHZS/tf-dropblock) of dropblock in tensorflow:
 
 
 
@@ -126,9 +126,9 @@ drop_block_size is the size of the block to be dropped. It can be initialized at
 make drop_block_size equal to 1 it will act like normal dropout.
 
 Another thing that was mentioned in the paper when using dropblocks is the decaying of the keep probability over the training iterations for
-better divergence. So starting from 1 then decay to 0.7 over many iterations might provide you with a better divergence.
+better divergence. So starting from 1 then decreasing to 0.7 over many iterations might provide you with a better divergence.
 
-DropBlocks are often used with ResNets so in the next tutorial we will extend our model and add skip connections and see the results of using
+DropBlocks are often used with ResNets so in the next tutorial we will extend our model by adding skip connections and see the results of using
 a simple ResNet with dropblock.
 
 

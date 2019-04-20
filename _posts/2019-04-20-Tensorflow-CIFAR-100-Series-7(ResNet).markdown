@@ -13,15 +13,16 @@ model. In this tutorial we will build a simple resnet upon it and see the result
 ## ResNets
 
 There are tons of sources that explain the concept of ResNets and skip connections very well. But very briefly, the idea is that when we build
-a deeper neural net we expect the accuracy to keep increasing, but normally this doesn't happen and it in fact worsen. The reason for this is that 
-when you go deeper problems like vanishing gradients really starts to affect your model performance. So to solve this problem skip connections were
-added to the network to make it easy to ignore layers that will hurt the performance and in worst case keep the same performance without making it 
-worse, and in best case make it better. The following is an image from Andrew Ng's [lecture](https://www.youtube.com/watch?v=ZILIbUvp5lk) on ResNets:
+a deeper neural net we expect the accuracy to keep increasing, but normally this doesn't happen and in fact it worsens. The reason for this is that 
+when you go deeper problems like vanishing gradients really start to affect your model's performance. So to solve this problem, skip connections were
+added to the network to make it easy to ignore layers that will hurt the performance. So now adding 
+more layers will at least not hurt the performance and in better cases make it better.
+The following is an image from Andrew Ng's [lecture](https://www.youtube.com/watch?v=ZILIbUvp5lk) on ResNets:
 
 ![image](https://user-images.githubusercontent.com/6074821/56459761-af601800-6398-11e9-96ee-61c11cab6d61.png)
 
 So all that we should do is add this skip connections by summing the activations of layer L with the logits of layer L+n(where n can be the skip
-length) and running this sum to the activation function to get activations of layer L+n. 
+length) and feeding this sum to the activation function to get activations of layer L+n. 
 
 ![image](https://user-images.githubusercontent.com/6074821/56459813-71172880-6399-11e9-88cf-c8bca992ca3c.png)
 
