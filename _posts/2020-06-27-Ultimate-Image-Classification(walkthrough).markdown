@@ -202,8 +202,8 @@ The compressed model will be faster to load in inference mode.
 
 The repo also supports multi-label classification, but of course there are some differences like:
 
-- The data csv should have the labels separated by "$" if an image has more than one class associated with it.
- For example: class1$class2. In this case you should provide the csv for the training and test sets.
+- The data csv should have the labels separated by '\$' if an image has more than one class associated with it.
+ For example: class1\$class2. In this case you should provide the csv for the training and test sets.
  
 - In multi-label classification mode, the loss function is automatically switched to binary cross entropy, instead of categorical cross entropy, and also
 the final activations will be set to sigmoid instead of softmax.
@@ -243,6 +243,7 @@ In case you want to add or remove some augmentations, you can tweak 'augmenter.p
 the augmentations, so you can visit this [page](https://imgaug.readthedocs.io/en/latest/source/overview_of_augmenters.html) 
 for more possible augmentations.
 
+![image](https://user-images.githubusercontent.com/6074821/85763025-9a0d1900-b714-11ea-8d32-553eff595106.png)
 
 ### Thank you
 If you have any questions, please leave a comment here or add an issue to the repo.
