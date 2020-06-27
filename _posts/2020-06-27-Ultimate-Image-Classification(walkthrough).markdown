@@ -23,7 +23,7 @@ There are 3 classes in the dataset which are (pool, operating room, gym).
 
 - Download or clone the [repo](https://github.com/omar-mohamed/ultimate-image-classification)
 - Install the requirements using pip in your python3.6+ environment. (Note you can switch to cpu version of tensorflow if you don't have a gpu)
-- Download the dataset from [here] (https://drive.google.com/drive/folders/1JaXOQW6MUSE5aSFNv_nQyz45h_WtkoJy?usp=sharing)
+- Download the dataset from [here](https://drive.google.com/drive/folders/1JaXOQW6MUSE5aSFNv_nQyz45h_WtkoJy?usp=sharing)
 - Extract the images inside 'data' folder in the repo to have 'data/images'
 - To use the repo we need to have a csv to describe te data in this format:
 ![image](https://user-images.githubusercontent.com/6074821/85778023-705aee80-b722-11ea-936a-38b6d20329f8.png)
