@@ -7,7 +7,7 @@ subtitle:  	Scene recognition walkthrough
 category:  Technical
 ---
 
-This is a walkthrough on how to use [ultimate_image_classification_repo](https://github.com/omar-mohamed/ultimate-image-classification) 
+This is a walkthrough on how to use [ultimate_image_classification](https://github.com/omar-mohamed/ultimate-image-classification) repo
 from start to finish. This repo is a general image classification module made using Tensorflow 2 and Keras
  that contains multiple pre-trained models you can use on any data. 
 
@@ -154,12 +154,11 @@ python draw_activations.py
 The script loads the model specified in 'load_model_path' in configs and saves the results next to the model 
 , in 'save_model_path' in configs, inside a folder called cam_output. The results will be similar to these:
 
-<p float="left|top">
+<br/>
+ <img src="https://user-images.githubusercontent.com/6074821/85793918-0c422580-b736-11ea-85ac-3b7bfc883593.png" width="300" height="250" align="left">
+ <img src="https://user-images.githubusercontent.com/6074821/85794105-5aefbf80-b736-11ea-8257-0abc79bc2e02.png" width="300" height = "250" align="left">
+ <img src="https://user-images.githubusercontent.com/6074821/85794298-a6a26900-b736-11ea-9a5d-752d81a479fa.png" width="300" height = "250" align="left|top">
 
- <img src="https://user-images.githubusercontent.com/6074821/85793918-0c422580-b736-11ea-85ac-3b7bfc883593.png" width="300" height="250" >
- <img src="https://user-images.githubusercontent.com/6074821/85794105-5aefbf80-b736-11ea-8257-0abc79bc2e02.png" width="300" height = "250" >
- <img src="https://user-images.githubusercontent.com/6074821/85794298-a6a26900-b736-11ea-9a5d-752d81a479fa.png" width="300" height = "250">
-</p>
  
 - Although there is a full tensorboard support during training, you might want to draw a simple figure of the 
 training and test accuracies through the epochs. To do that you can run plot_training_log script:
