@@ -202,7 +202,7 @@ The compressed model will be faster to load in inference mode.
 
 The repo also supports multi-label classification, but of course there are some differences like:
 
-- The data csv should have the labels separated by '$' if an image has more than one class associated with it.
+- The data csv should have the labels separated by "$" if an image has more than one class associated with it.
  For example: class1$class2. In this case you should provide the csv for the training and test sets.
  
 - In multi-label classification mode, the loss function is automatically switched to binary cross entropy, instead of categorical cross entropy, and also
